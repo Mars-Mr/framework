@@ -25,6 +25,6 @@ dependencyResolutionManagement {
 rootProject.name = "My Application"
 include(":app")
 include(":core")
-include(":datarepositories")
-include(":DataRepositories:net")
-include(":DataRepositories:database")
+include(":repository")
+include(":repository:net")
+include(":repository:database")
