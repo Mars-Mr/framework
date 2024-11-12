@@ -37,6 +37,7 @@ class NetworkResponseCall<S : Any>(private val call: Call<S>) : Call<NetWorkResp
                             this@NetworkResponseCall,
                             Response.success(NetWorkResponse.ApiError("", ""))
                         )
+
                     } else {
                         callback.onResponse(
                             this@NetworkResponseCall,

@@ -1,5 +1,7 @@
 package com.example.net.response
 
+import com.example.net.error.BusinessException
+import com.example.net.error.GlobalErrorHandler
 import retrofit2.Call
 import retrofit2.CallAdapter
 import retrofit2.Retrofit
@@ -7,9 +9,13 @@ import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type
 
 
+open class NetworkResponseAdapterFactory(private val handler: GlobalErrorHandler) :
+    CallAdapter.Factory() {
 
+    interface ErrorHandler {
+        fun onFailure(throwable: BusinessException)
+    }
 
-open class NetworkResponseAdapterFactory : CallAdapter.Factory() {
     override fun get(
         type: Type,
         annotation: Array<out Annotation>,
@@ -25,10 +31,10 @@ open class NetworkResponseAdapterFactory : CallAdapter.Factory() {
         if (getRawType(responseType) != NetWorkResponse::class.java) {
             return null
         }
-        check(responseType is ParameterizedType){
+        check(responseType is ParameterizedType) {
             "Response must be parameterized as Netw"
         }
-        return object :CallAdapter<Any, Call<*>?>{
+        return object : CallAdapter<Any, Call<*>?> {
             override fun responseType(): Type {
                 return responseType
             }
