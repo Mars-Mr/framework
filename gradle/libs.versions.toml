@@ -1,5 +1,6 @@
 [versions]
 agp = "8.7.1"
+ksp = "2.0.21-1.0.27"
 kotlin = "2.0.0"
 coreKtx = "1.10.1"
 junit = "4.13.2"
@@ -10,12 +11,43 @@ activityCompose = "1.8.0"
 composeBom = "2024.04.01"
 appcompat = "1.6.1"
 material = "1.10.0"
-retrofit = "2.11.0"
-converterMoshi = "2.11.0"
+coroutines = "1.7.1"
+#三方依赖库
 moshi = "1.15.1"
 moshiPlugin = "1.15.1"
 loggingInterceptor = "3.6.0"
-coroutines = "1.7.1"
+retrofit = "2.11.0"
+converterMoshi = "2.11.0"
+constraintlayout = "2.1.4"
+coordinatorlayout = "1.2.0"
+banner = "2.2.3"
+cardview = "1.0.0"
+glide = "4.15.1"
+okhttp3Interceptor = "3.6.0"
+okhttp3 = "3.12.0"
+viewpager2 = "1.1.0"
+moshi_kotlin_code = "1.15.1"
+mmkv = "2.0.0"
+eventbus = "3.3.1"
+room='2.6.1'
+recyclerview='1.3.2'
+tbssdk='44226'
+permissions='20.0'
+leakcanary='2.14'
+oaid='4.2.4'
+rdelivery='1.3.35-RC02'
+crashreport='4.1.9.3'
+alipaysdk='15.8.17'
+magicIndicator='1.7.0'
+immersionbar='3.2.2'
+immersionbarktx='3.2.2'
+aviloading='2.1.3'
+antifake='1.7.0'
+wasabeef='4.0.2'
+scwangRefresh='2.1.0'
+persistentCookieJar='v1.0.1'
+blurview='version-2.0.5'
+cityPicker='2.1.0'
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -34,15 +66,66 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+#三方依赖库
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-coordinatorlayout = { group = "androidx.coordinatorlayout", name = "coordinatorlayout", version.ref = "coordinatorlayout" }
 com-squareup-retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 com-squareup-retrofit2-converter = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "converterMoshi" }
 com-squareup-moshi-kotlin = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi" }
 okhttp3-logging-moshi-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "loggingInterceptor" }
 com-squareup-moshi-kotlin-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-codegen", version.ref = "moshiPlugin" }
 org-jetbrains-kotlinx-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+banner = {group="io.github.youth5201314", name = "banner", version.ref = "banner" }
+glide = {group="com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+androidx-cardview = {group="androidx.cardview", name = "cardview", version.ref = "cardview" }
+org-jetbrains-kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+org-jetbrains-kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+squareup-okhttp3-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp3Interceptor" }
+squareup-okhttp3 = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp3" }
+squareup-retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+squareup-retrofit2-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+squareup-retrofit2-converter-scalars = { group = "com.squareup.retrofit2", name = "converter-scalars", version.ref = "retrofit" }
+squareup-retrofit2-adapter-rxjava2 = { group = "com.squareup.retrofit2", name = "adapter-rxjava2", version.ref = "retrofit" }
+androidx-viewpager2 = { group = "androidx.viewpager2", name = "viewpager2", version.ref = "viewpager2" }
+#JSON解析库
+squareup-retrofit2-converter-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "moshi" }
+#替代sp的优质存储方案，腾讯开源
+com-tencent-mmkv = { group = "com.tencent", name = "mmkv", version.ref = "mmkv" }
+#EventBus总线事件
+org-greenrobot-eventbus = { group = "org.greenrobot", name = "eventbus", version.ref = "eventbus" }
+#数据库
+androidx-room-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+androidx-room-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+#recyclerview
+androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
+#腾讯x5 webView
+com-tencent-tbs-tbssdk = { group = "com.tencent.tbs", name = "tbssdk", version.ref = "tbssdk" }
+#权限请求
+com-github-getActivity-permissions = { group = "com.github.getActivity", name = "XXPermissions", version.ref = "permissions" }
+com-squareup-leakcanary = { group = "com.squareup.leakcanary", name = "leakcanary-android", version.ref = "leakcanary" }
+com-github-gzuliyujiang = { group = "com.github.gzu-liyujiang", name = "Android_CN_OAID", version.ref = "oaid" }
+com-tencent-shiply-rdelivery = { group = "com.tencent.shiply", name = "rdelivery", version.ref = "rdelivery" }
+com-tencent-bugly-crashreport = { group = "com.tencent.bugly", name = "crashreport", version.ref = "crashreport" }
+
+com-alipay-sdk = { group = "com.alipay.sdk", name = "alipaysdk-android", version.ref = "alipaysdk" }
+com-github-hackware-mgicIndicator = { group = "com.github.hackware1993", name = "MagicIndicator", version.ref = "magicIndicator" }
+com-geyifeng-immersionbar-immersionbar = { group = "com.geyifeng.immersionbar", name = "immersionbar", version.ref = "immersionbar" }
+com-geyifeng-immersionbar-immersionbar-ktx = { group = "com.geyifeng.immersionbar", name = "immersionbar-ktx", version.ref = "immersionbarktx" }
+com-wang-avi-loading = { group = "com.wang.avi", name = "library", version.ref = "aviloading" }
+io-github-happylishang-antifake = { group = "io.github.happylishang", name = "antifake", version.ref = "antifake" }
+jp-wasabeef-recyclerview-animators = { group = "jp.wasabeef", name = "recyclerview-animators", version.ref = "wasabeef" }
+io-github-scwang90-refresh-layout-kernel = { group = "io.github.scwang90", name = "refresh-layout-kernel", version.ref = "scwangRefresh" }
+io-github-scwang90-refresh-layout-classics = { group = "io.github.scwang90", name = "refresh-header-classics", version.ref = "scwangRefresh" }
+io-github-scwang90-refresh-layout-material = { group = "io.github.scwang90", name = "refresh-header-material", version.ref = "scwangRefresh" }
+com-github-franmontiel-persistentCookieJar = { group = "com.github.franmontiel", name = "PersistentCookieJar", version.ref = "persistentCookieJar" }
+com-github-dimezis-blurView = { group = "com.github.Dimezis", name = "BlurView", version.ref = "blurview" }
+com-github-zaaach-cityPicker = { group = "com.github.zaaach", name = "CityPicker", version.ref = "cityPicker" }
+
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-
+com-google-devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

@@ -12,8 +12,11 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/eventbus" />
+            <option value="$PROJECT_DIR$/logger" />
             <option value="$PROJECT_DIR$/repository" />
             <option value="$PROJECT_DIR$/repository/database" />
+            <option value="$PROJECT_DIR$/repository/mmkv" />
             <option value="$PROJECT_DIR$/repository/net" />
           </set>
         </option>

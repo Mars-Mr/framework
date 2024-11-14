@@ -1,11 +1,10 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    id("com.google.devtools.ksp")
 }
 
 android {
-    namespace = "com.custom.net"
+    namespace = "com.custom.mmkv"
     compileSdk = 34
 
     defaultConfig {
@@ -34,18 +33,12 @@ android {
 }
 
 dependencies {
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation(libs.com.squareup.retrofit2)
-    implementation(libs.com.squareup.retrofit2.converter)
-    implementation(libs.com.squareup.moshi.kotlin)
-    implementation(libs.okhttp3.logging.moshi.interceptor)
-    api(libs.org.jetbrains.kotlinx.coroutines)
-    implementation(project(":logger"))
-    ksp(libs.com.squareup.moshi.kotlin.codegen)
     implementation(libs.material)
+    implementation(project(":logger"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
 }
