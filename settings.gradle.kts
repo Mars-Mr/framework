@@ -26,10 +26,15 @@ dependencyResolutionManagement {
 
 rootProject.name = "My Application"
 include(":app")
-include(":core")
-include(":repository")
+include(":core-service")
+include(":repository-service")
 include(":repository:net")
 include(":repository:database")
-include(":logger")
+include(":logger-service")
 include(":repository:mmkv")
 include(":eventbus")
+include(":payment-service")
+include(":push-service")
+include(":push:getui")
+include(":push:jiguang")
+include(":update-service")

@@ -4,20 +4,26 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="testRunner" value="CHOOSE_PER_TEST" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core-service" />
             <option value="$PROJECT_DIR$/eventbus" />
-            <option value="$PROJECT_DIR$/logger" />
+            <option value="$PROJECT_DIR$/logger-service" />
+            <option value="$PROJECT_DIR$/payment-service" />
+            <option value="$PROJECT_DIR$/push" />
+            <option value="$PROJECT_DIR$/push-service" />
+            <option value="$PROJECT_DIR$/push/getui" />
+            <option value="$PROJECT_DIR$/push/jiguang" />
             <option value="$PROJECT_DIR$/repository" />
+            <option value="$PROJECT_DIR$/repository-service" />
             <option value="$PROJECT_DIR$/repository/database" />
             <option value="$PROJECT_DIR$/repository/mmkv" />
             <option value="$PROJECT_DIR$/repository/net" />
+            <option value="$PROJECT_DIR$/update-service" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
