@@ -38,7 +38,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.com.tencent.mmkv)
     implementation(libs.material)
-    implementation(project(":logger"))
+    implementation(project(":logger-service"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

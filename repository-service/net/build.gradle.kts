@@ -41,7 +41,7 @@ dependencies {
     implementation(libs.com.squareup.moshi.kotlin)
     implementation(libs.okhttp3.logging.moshi.interceptor)
     api(libs.org.jetbrains.kotlinx.coroutines)
-    implementation(project(":logger"))
+    implementation(project(":logger-service"))
     ksp(libs.com.squareup.moshi.kotlin.codegen)
     implementation(libs.material)
     testImplementation(libs.junit)

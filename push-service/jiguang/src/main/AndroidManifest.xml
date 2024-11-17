@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!--允许应用可以访问网络。-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--允许应用获取网络信息状态，如当前的网络连接是否有效。。-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--官方定义的权限，允许应用接收 JPush 内部代码发送的广播消息。-->
+    <uses-permission android:name="${MY_APPLICATION_ID}.permission.JPUSH_MESSAGE" />
+
+    <application>
+        <service
+            android:name="com.custom.push.jiguang.JiGuangService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.custom.push.jiguang.JiGuangReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVER_MESSAGE" />
+                <category android:name="${MY_APPLICATION_ID}" />
+            </intent-filter>
+        </receiver>
+    </application>
 </manifest>

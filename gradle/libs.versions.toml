@@ -48,7 +48,8 @@ scwangRefresh='2.1.0'
 persistentCookieJar='v1.0.1'
 blurview='version-2.0.5'
 cityPicker='2.1.0'
-
+jpush = "5.5.0"
+jpusha = "5.5.0.a"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -121,7 +122,11 @@ io-github-scwang90-refresh-layout-material = { group = "io.github.scwang90", nam
 com-github-franmontiel-persistentCookieJar = { group = "com.github.franmontiel", name = "PersistentCookieJar", version.ref = "persistentCookieJar" }
 com-github-dimezis-blurView = { group = "com.github.Dimezis", name = "BlurView", version.ref = "blurview" }
 com-github-zaaach-cityPicker = { group = "com.github.zaaach", name = "CityPicker", version.ref = "cityPicker" }
-
+cn-jiguang-sdk-plugin-xiaomi = { group = "cn.jiguang.sdk.plugin", name = "xiaomi", version.ref = "jpusha" }
+cn-jiguang-sdk-jpush = { group = "cn.jiguang.sdk", name = "jpush", version.ref = "jpush" }
+androidx-room = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

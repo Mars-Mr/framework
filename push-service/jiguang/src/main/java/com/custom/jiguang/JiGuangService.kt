@@ -1,4 +1,9 @@
-package com.custom.jiguang
+package com.custom.push.jiguang
 
-class JiGuangService {
+import cn.jpush.android.service.JCommonService
+
+class JiGuangService :JCommonService() {
+
+
+
 }
