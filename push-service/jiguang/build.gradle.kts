@@ -20,10 +20,28 @@ android {
         }
 
         manifestPlaceholders += mutableMapOf(
-            "JPUSH_PKGNAME " to "\"${rootProject.extra.get("myApplicationId")}\"",
-            "JPUSH_APPKEY" to "\"${rootProject.extra.get("jpushAppKey")}\"",
+            "JPUSH_PKGNAME " to "${rootProject.extra.get("myApplicationId")}",
+            "JPUSH_APPKEY" to "${rootProject.extra.get("jpushAppKey")}",
             "JPUSH_CHANNEL" to "developer-default",
-            "MY_APPLICATION_ID" to "\"${rootProject.extra.get("myApplicationId")}\"",
+
+            //xiaomi_config_start
+            "XIAOMI_APPID" to "MI-小米的APPID",
+            "XIAOMI_APPKEY" to "MI-小米的APPKEY",
+            //xiaomi_config_end
+            //oppo_config_start
+            "OPPO_APPKEY" to "OP-oppo的APPKEY",
+            "OPPO_APPID" to "OP-oppo的APPID",
+            "OPPO_APPSECRET" to "OP-oppo的APPSECRET",
+            //oppo_config_end
+            //vivo_config_start
+            "VIVO_APPKEY" to "vivo的APPKEY",
+            "VIVO_APPID" to "vivo的APPID",
+            //honor_config_start
+            "HONOR_APPID" to "honor的APPID",
+           //honor_config_end
+
+            "MY_APPLICATION_ID" to "${rootProject.extra.get("myApplicationId")}",
+
         )
 
         buildConfigField("String", "jpushAppKey", "\"${rootProject.extra.get("jpushAppKey")}\"")

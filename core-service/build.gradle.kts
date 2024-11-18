@@ -33,12 +33,19 @@ android {
 }
 
 dependencies {
+
+    api(project(":push-service"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    //coroutines
+    api(libs.org.jetbrains.kotlinx.coroutines.core)
+    api(libs.org.jetbrains.kotlinx.coroutines.android)
+
+    api(libs.androidx.constraintlayout)
     //约束布局
     api(libs.androidx.constraintlayout)
     //viewpager

@@ -40,7 +40,10 @@ dependencies {
     implementation(libs.com.squareup.retrofit2.converter)
     implementation(libs.com.squareup.moshi.kotlin)
     implementation(libs.okhttp3.logging.moshi.interceptor)
-    api(libs.org.jetbrains.kotlinx.coroutines)
+    //coroutines
+    implementation(libs.org.jetbrains.kotlinx.coroutines.core)
+    implementation(libs.org.jetbrains.kotlinx.coroutines.android)
+
     implementation(project(":logger-service"))
     ksp(libs.com.squareup.moshi.kotlin.codegen)
     implementation(libs.material)

@@ -75,7 +75,7 @@ com-squareup-retrofit2-converter = { group = "com.squareup.retrofit2", name = "c
 com-squareup-moshi-kotlin = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi" }
 okhttp3-logging-moshi-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "loggingInterceptor" }
 com-squareup-moshi-kotlin-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-codegen", version.ref = "moshiPlugin" }
-org-jetbrains-kotlinx-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+
 banner = {group="io.github.youth5201314", name = "banner", version.ref = "banner" }
 glide = {group="com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 androidx-cardview = {group="androidx.cardview", name = "cardview", version.ref = "cardview" }

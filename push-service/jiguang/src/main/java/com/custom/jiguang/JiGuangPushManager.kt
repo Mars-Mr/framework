@@ -12,6 +12,7 @@ import cn.jpush.android.data.JPushConfig
 class JiGuangPushManager private constructor() {
 
     private val intentMap: MutableMap<String, String> = mutableMapOf()
+    private lateinit var applicationContext: Context
 
     companion object {
         @Volatile
@@ -31,10 +32,26 @@ class JiGuangPushManager private constructor() {
 
     fun initJiGuang(applicationContext: Context) {
         // 设置调试模式
+        this.applicationContext = applicationContext
         JPushInterface.setDebugMode(true);
         //init 初始化 SDK 与开启推送服务 API
         JPushInterface.init(applicationContext)
         JCollectionAuth.setAuth(applicationContext, true);
+    }
+
+    fun getIntentMap(key: String): String {
+        intentMap[key]?.let {
+            return it
+        }
+        return ""
+    }
+
+    fun getRegisterID() {
+        JPushInterface.getRegistrationID(applicationContext)
+    }
+
+    fun getIntentMapSize(): Int {
+        return intentMap.size
     }
 
     /**

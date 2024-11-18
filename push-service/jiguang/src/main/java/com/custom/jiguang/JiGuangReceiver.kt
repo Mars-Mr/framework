@@ -9,6 +9,7 @@ import cn.jpush.android.api.NotificationMessage
 import cn.jpush.android.service.JPushMessageReceiver
 import com.custom.jiguang.JiGuangPushManager
 import com.custom.logger.LoggerManager
+import org.json.JSONObject
 
 class JiGuangReceiver : JPushMessageReceiver() {
 
@@ -25,7 +26,12 @@ class JiGuangReceiver : JPushMessageReceiver() {
     override fun onNotifyMessageOpened(context: Context, message: NotificationMessage) {
         LoggerManager.d(TAG, "[onNotifyMessageOpened] $message")
         try {
-            JiGuangPushManager.getInstance().startActivity(context, "", message)
+            //打开自定义的Activity
+            val fullClassName =
+                JiGuangPushManager.getInstance().getIntentMap("key1")
+            JiGuangPushManager.getInstance().startActivity(context, fullClassName, message)
+
+
         } catch (throwable: Throwable) {
         }
     }
